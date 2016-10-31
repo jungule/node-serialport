@@ -10,6 +10,7 @@ addons:
     - gcc-multilib
 os:
 - linux
+#- osx
 env:
   global:
     secure: kGvWDBAibMWkQO1bFCfiaezH69+eK5T5EyftLJkXYFM0586c/O+VryjhnaXve4g//ZD1/H9+X6sOX0505FeOijqHAVXusFyi7UpB3ZQxWCxMKiDiln1AuMFTInl925QsurVTJsXnyNT7NJkCKstfRqerUIgPOT2Wg6WrlEyKjgwOZ+y/Zx1qrfBvlWEdmPNZRvBKgSRf6K6GakhLeRRBidEvMCHWtHW5vWGBW3ZT1kl75lM074LvoLEFMqRRVvOj9Ps6rXOibG6n82SKt/wMOMbMUdeKegWhAZtjw4yTNmCxxXrmsmhkyQ1Uecki1vbRFQrRFxUVYrsXW6p1piu69hOTyV4fDoZLuDcz7OVx7fTFkoc5Wv/JHCGkCiNWxTp/kbFRLDr45QcH/CXRaSpzlrHTgU3sZGfe0YtT5EYX9eFuNEUPLuWZRk44pLZcCywtE/3Hn2KA9mOT9Nl5vYesmEGJc/Y9vR5JGRF0NByGphCYrRzBrgXxKEiPG2/KpbgPuyQgvTvzPiJJJ8+dd7iT80jg5V+WVswYuL0jKvlWmxSOy/zvXVYLcXM7JTK0aLgqOCBcxs93dDAILJ95qK8bHtnYV0JAPnTFU03O0CIfy9/gDGJ4rV9nO9C2SPI1AQhLYlbb6O5JwiOPN2EQLKOXq3eN8n21s8wfg6fAQP7oFDY=
@@ -61,4 +62,4 @@ script:
 - if [[ $PUBLISH_BINARY == true ]]; then node-pre-gyp-github publish --release; fi;
 - node-pre-gyp clean
 - node-gyp clean
-- if [[ $PUBLISH_BINARY == true ]]; then npm install --fallback-to-build=false; fi;
+#- if [[ $PUBLISH_BINARY == true ]]; then npm install --fallback-to-build=false; fi;
