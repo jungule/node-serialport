@@ -9,7 +9,6 @@ addons:
     - g++-4.8-multilib
     - gcc-multilib
 
-# Build matrix
 os:
 - linux
 - osx
@@ -51,7 +50,7 @@ before_install:
 # Set a test serialport for integration testing when we run our tests if we have one
 - if [[ $TRAVIS_OS_NAME == "osx" ]]; then export TEST_PORT='/dev/cu.serial1'; fi
 # figure out if we should publish
-- PUBLISH_BINARY=false
+- PUBLISH_BINARY=true
 # if we are building a tag then publish
 - echo $TRAVIS_BRANCH
 - echo `git describe --tags --always HEAD`
