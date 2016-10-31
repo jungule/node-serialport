@@ -57,9 +57,9 @@ install:
 - npm install --build-from-source
 script:
 - node ./
-- npm test
+#- npm test
 - if [[ $PUBLISH_BINARY == true ]]; then node-pre-gyp package; fi;
 - if [[ $PUBLISH_BINARY == true ]]; then node-pre-gyp-github publish --release; fi;
 - node-pre-gyp clean
 - node-gyp clean
-#- if [[ $PUBLISH_BINARY == true ]]; then npm install --fallback-to-build=false; fi;
+- if [[ $PUBLISH_BINARY == true ]]; then npm install --fallback-to-build=false; fi;

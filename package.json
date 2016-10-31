@@ -15,7 +15,7 @@
   "main": "./lib/serialport",
   "repository": {
     "type": "git",
-    "url": "git://github.com/voodootikigod/node-serialport.git"
+    "url": "git://github.com/jungule/node-serialport.git"
   },
   "keywords": [
     "serialport",
